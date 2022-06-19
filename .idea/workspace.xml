@@ -2,292 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f854c5a8-a0d8-4447-bc5f-0aa7f998de5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/DecisionTree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/11S0BLTI.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/12tonsushi.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/8bitlim.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ABEAKRG.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ADD-JAZZ.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ALEXA.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ALIEESBI.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ALIEESB_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ALIEESI_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ALIEES__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ALIEN5.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ANDOVER_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ARCHBLC_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ATOMIC__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ATROX.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AVENGEANCE MIGHTIEST AVENGER.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AZRAEL__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Aaargh.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Action Man Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Action_Force.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AdobeGothicStd-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AdobeHeitiStd-Regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Adventure.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Aileenation.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AldotheApache.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Alice and the Wicked Monster.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Aliquam.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AliquamREG.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/AliquamRit.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Aliquamulti.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Alpha Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/American Captain.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Ancillary-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Artbrush.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Atlantic_Cruise-Demo.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BADABB__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BAUERG__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BEBAS.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BEBAS__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BEBAS___.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BLUEHIGD.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BNMachine.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BOMBARD_.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BOTTRBB_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BOTTRBRG.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BUBBLEBO.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BabelSans-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BabelSans-BoldOblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BabelSans-Oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BabelSans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Backpack_PersonalUse.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BankGothic-Regular DB.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BankGothic-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BastardusSans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Battleground.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BebasKai-Regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/BebasNeue.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Blacklisted.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Buran USSR.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Buran USSR_0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/CHERI___.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/CHICM___.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/CHINESER.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/CODE Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/COUTURE-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/CREABBB_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/CREABBRG.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Call of Ops Duty.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Casual Hardcore.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Champagne &amp; Limousines Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Comic Book.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Comicv2b.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Comicv2bi.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Copper Canyon WBW.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/DEADJIM.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Dark Ministry.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Delicious-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Delicious-BoldItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Delicious-Heavy.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Delicious-Italic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Delicious-Roman.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Diavlo_BLACK_II.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Diavlo_BOLD_II.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Diavlo_BOOK_II.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Diavlo_LIGHT_II.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Diavlo_MEDIUM_II.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/DistTh__.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Elkwood - Free.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Existence-Light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Exo-Black.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Exo-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/FONT.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/FUNDR___.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Florsn02.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Forque.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Freshman.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/GOLONG.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/GROBOLD_0.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Gabba_All_Caps.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Gotham Nights.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/GrutchGrotesk-CondensedLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/HACKED.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/HEADOH_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Harabara.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Hursheys.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/IRON MAN OF WAR 002 NCV.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Jedi.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/KENYAN.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/KRAVET__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Korner Deli NF.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/LT Oksana Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Laser Rod.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/LeelaUIb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/LithosPro-Black.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/MAGNUM__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/MankSans-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/MikadoBold_DEMO.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Minecraftia-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Molot.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Mouser.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/MyriadPro-BoldCond.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/NFS_by_JLTV.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/NHL Ducks.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/NIOBRG__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Neou-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Nirmala.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/NirmalaB.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/OLIVERSB.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ObelixProB-cyr.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/OpenSans-Semibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Opificio.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Opificio_Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/PORNSA__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/PRIMER.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/PRIMERB.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/PoplarStd.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Qiroff.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Questrian.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Quicksand_Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/RADIOSTA.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/RAPHAEL_.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/REVOLUTION.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ROTHWELL.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/RawengulkSans-094.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Righteous-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Arch Rival Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Atarian System.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Buttacup Lettering Bold Oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Buttacup Lettering Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Buttacup Lettering.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Cartoonist Hand SC Bold Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Cartoonist Hand.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Collegiate Solid.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Hollywood Hills Bold Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Hollywood Hills Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Juggernaut Condensed Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Juggernaut Condensed.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Laundromatic Bold Oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Movie Poster Bold Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Movie Poster Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF New Republic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Old Republic Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Old Republic SC Bold Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Old Republic SC Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Speakeasy Oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Speakeasy.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Sports Night NS Upright.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Sports Night NS.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Toontime B.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Willamette Bold Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Willamette Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SF Willamette.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SPEEM___.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Schluber.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SkarpaLt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Slimania Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Snowstorm Kraft.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Snowstorm Kraft_0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/SourceSansPro-Black.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Sparkler-demo.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Square.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/TAPEWORM.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/TOMMY__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/TequilaSunrise-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Timeline.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Ubuntu-B.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/UltraCondensedSansSerif.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Vanadine Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Vegur-B 0.602.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Vegur-L 0602.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Waukegan LDO Black Oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Waukegan LDO Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/YARDSALE.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/YanoneKaffeesatz-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/YanoneKaffeesatz-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/YanoneKaffeesatz-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/YanoneKaffeesatz-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/Yearsupplyoffairycakes.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ZITZ____.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ZUDJI___.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/absci___.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/abscib__.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/accid__.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/advent-Lt1.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/advent-Re.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/annifont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ap.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/arialbd.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/autobahn.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/basictitlefont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/big_noodle_titling.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/big_noodle_titling_oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bluebold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bluecond.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bluehigh.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bobcaygr.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bottix.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bradybun.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/bronic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/budeasym.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/cartoonist_kooky.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/cartwheel.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/chinese rocks rg.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/coolvetica rg.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/corbel.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/corbelb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/corbeli.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/corbelz.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/couture-bld.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/criticized.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/engebold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/gadugib.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/glasket500.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/helsinki.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/impact.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/kirsty__.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/kr1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/libelsuit.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ltromatic bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/lucid.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/mangat.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/medra___.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/nevis.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/novem___.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/pakenham.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/panicbuttonbb_ital.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/panicbuttonbb_reg.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/ratio___.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/segoeuib.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/srgt6pack.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/steelfib.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/steelfis.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/tahoma.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/talldark.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/telegrafico_by_ficod.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/upheavtt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/vantage.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/verdana.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/verdanab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/vikingsquadcond.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/visitor2.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/wunderbar.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/wyldb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/wyldt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/yesterdaysmeal.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/yonder.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/zeldadxt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/zephyrea.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Font_Pack/zephyreg.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/KNearestNeighbors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/PossibleChar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/Preprocess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/dataset_flattened/X_dataset.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/dataset_flattened/X_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/dataset_flattened/X_train.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/dataset_flattened/Y_dataset.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/dataset_flattened/Y_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819/src/dataset_flattened/Y_train.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -303,12 +21,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/INFO-H410-Techniques-of-artificial-intelligence-201819" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="297JUgASgA2EKGuu15l8RPYRydh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -344,7 +63,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="SCRIPT_NAME" value="S:\Users\jalal\Documents\GitHub\Adversarial-attack\Main2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -373,6 +92,7 @@
       <workItem from="1654084328369" duration="8922000" />
       <workItem from="1654165370967" duration="3586000" />
       <workItem from="1655645718565" duration="7881000" />
+      <workItem from="1655667090817" duration="687000" />
     </task>
     <servers />
   </component>
@@ -394,5 +114,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/adversarialAttack$Main.coverage" NAME="Main Coverage Results" MODIFIED="1655663931135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Adversarial_attack$Main.coverage" NAME="Main Coverage Results" MODIFIED="1655667133079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
