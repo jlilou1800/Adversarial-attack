@@ -8,17 +8,16 @@ import os
 from shutil import copy
 
 # from src import Preprocess, PossibleChar
-import PossibleChar
-import Preprocess
+from src import PossibleChar, Preprocess
 
 run = True
 
-FACTOR_SCALE = 4
+FACTOR_SCALE = 5
 
 class Database:
-    def __init__(self, nbr_of_file, repository_name="dataset", font_pack_path="Font_Pack", img_width=25, img_height=20, font_size=10):
+    def __init__(self, nbr_of_file, repository_name="src/dataset", font_pack_path="src/Font_Pack", img_width=25, img_height=20, font_size=10):
         self.nbrOfFile = nbr_of_file
-        self.alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" # TODO: nombre a peut-être supprimer
+        self.alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"#0123456789" # TODO: nombre a peut-être supprimer
         self.repository = repository_name
         self.imgWidth = img_width
         self.imgHeight = img_height
@@ -46,8 +45,8 @@ class Database:
                 print('error')
 
     def updateFlattenedDataset(self, img, char):
-        x_db = open('{0}_flattened/X_{0}.txt'.format(self.repository), 'a')
-        y_db = open('{0}_flattened/Y_{0}.txt'.format(self.repository), 'a')
+        x_db = open('{0}_flattened/X_dataset.txt'.format(self.repository), 'a')
+        y_db = open('{0}_flattened/Y_dataset.txt'.format(self.repository), 'a')
         img_str = ""
         for i in range(len(img)):
             for j in range(len(img[i])):
@@ -91,8 +90,8 @@ class Database:
         return succes, crop_img
 
     def updateTestOrTrainingFlattened(self, i, j):
-        x_db = open('{0}_flattened/X_{0}.txt'.format(self.repository), 'r')
-        y_db = open('{0}_flattened/Y_{0}.txt'.format(self.repository), 'r')
+        x_db = open('{0}_flattened/X_dataset.txt'.format(self.repository), 'r')
+        y_db = open('{0}_flattened/Y_dataset.txt'.format(self.repository), 'r')
         x_lines = x_db.readlines()
         y_lines = y_db.readlines()
         x_train = open('{0}_flattened/X_train.txt'.format(self.repository), 'w')
