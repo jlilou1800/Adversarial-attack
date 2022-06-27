@@ -5,7 +5,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
 
 
 import numpy as np
@@ -14,35 +15,17 @@ from src import Database
 from src.Classifiers import AdaptiveBoosting, LogisticRegression, BayesianNetwork, DecisionTree, RandomForest, Support_Vector_Machine, K_NearestNeighbors
 import warnings
 
-# import tensorflow as tf
-# from keras.utils import np_utils
+import tensorflow as tf
+from keras.utils import np_utils
 # from cleverhans.tf2.attacks import fast_gradient_method, basic_iterative_method, momentum_iterative_method
 
+import cleverhans.attacks.
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 COLUMN = 20
 LINE = 25
 
-def FGSM_attack(X):
-    X_adv = None
-
-    return X_adv
-
-# loss_object = tf.keras.losses.CategoricalCrossentropy()
-# pretrained_model = tf.keras.applications.MobileNetV2(include_top=True, weights='imagenet')
-# pretrained_model.trainable = False
-
-# def create_adversarial_pattern(input_image, input_label):
-#     with tf.GradientTape() as tape:
-#         tape.watch(input_image)
-#         prediction = pretrained_model(input_image)
-#         loss = loss_object(input_label, prediction)
-#     # Get the gradients of the loss w.r.t to the input image.
-#     gradient = tape.gradient(loss, input_image)
-#     # Get the sign of the gradients to create the perturbation
-#     signed_grad = tf.sign(gradient)
-#     return signed_grad
 
 def adversarial_attack(X_test, classifierAlgo):
     adversarial_img = []
@@ -61,6 +44,24 @@ def adversarial_attack(X_test, classifierAlgo):
     y_pred = noisy_prediction[0]
     return y_pred
 
+def create_adv_examples(model, input_t, x_to_adv, attack_dict):
+    """
+    This fn may seem bizarre and pointless, but the point of it is to
+    enable the entire attack to be specified as a dict from the command line without
+    editing this script, which is convenient for storing the settings used for an attack
+    """
+    if attack_dict['method'] == 'fgm':
+        attack = FastGradientMethod(model, sess=K.get_session(), back='tf')
+    elif attack_dict['method'] == 'bim':
+        attack = attacks.BasicIterativeMethod(model, sess=K.get_session(), back='tf')
+    elif attack_dict['method'] == 'mim':
+        attack = attacks.MomentumIterativeMethod(model, sess=K.get_session(), back='tf')
+    else:
+        assert False, 'Current attack needs to be added to the create attack fn'
+    adv_tensor = attack.generate(input_t, **{k: a for k, a in attack_dict.items() if
+                                             k != 'method'})  # 'method' key for this fn use
+    x_adv = batch_eval(adv_tensor, input_t, x_to_adv, batch_size=args.batch_size, verbose="Generating adv examples")
+    return x_adv
 
 def main():
     # db = Database.Database(10000)
@@ -68,13 +69,24 @@ def main():
     # db.kFoldCrossValidation(10, 1)
     # parameter_testing()
 
-    print("Decision Tree - Best Parameters establishing ...")                 # accuracy = 0.936
-    DT = DecisionTree.DecisionTree('f_measure')
+    X = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))[0]
+    # plt.imshow(X.reshape(LINE, COLUMN), vmin=0., vmax=1.)
+    # plt.show()
+    # fgsm(X, ord("N"),0.1)
 
-    X_test = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))
-    x_pred = DT.predict2(X_test[:5])[0]
-    print("X prédiction = ", x_pred)
-    adversarial_attack(X_test[:5], DT)
+
+
+
+
+    # print("Decision Tree - Best Parameters establishing ...")                 # accuracy = 0.936
+    # DT = DecisionTree.DecisionTree('f_measure')
+    #
+    # X_test = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))
+    # x_pred = DT.predict2(X_test[:5])[0]
+    # print("X prédiction = ", x_pred)
+    # adversarial_attack(X_test[:5], DT)
+
+
     # print(img)
     # prediction = DT.predict2(img)
     # print("-"*15)
