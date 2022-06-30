@@ -47,9 +47,14 @@ class BaseClassifier:
         return y_test, self.classifier.predict(X_test), y_score[:, 1]
 
     def predict2(self, x_test):
+        # x_test = [x_test]
         y_test = self.classifier.predict(x_test)
         y_score = self.classifier.predict_proba(x_test)
         return y_test, y_score[:, 1]
+
+    def predict_proba(self, x):
+        p = self.classifier.predict_proba(x)
+        return p
 
     def evaluationMetrics(self, y_true, y_pred, y_score):
         return {"accuracy": accuracy_score(y_true, y_pred)}
