@@ -10,8 +10,8 @@ class K_NearestNeighbors(BaseClassifier.BaseClassifier):
     def __init__(self, datasets, metric_choose='*'):
         BaseClassifier.BaseClassifier.__init__(self, metric_choose)
         print("Optimisation of the parameters ...")
-        self.KNNBestParameters = self.parameter_optimize()
-        # self.KNNBestParameters = self.get_optimized_paramater()
+        # self.KNNBestParameters = self.parameter_optimize()
+        self.KNNBestParameters = self.get_optimized_paramater()
         print("applying the best parameters to our dataset...")
         self.k_fold_cross_validation(10, self.KNNBestParameters, KNeighborsClassifier)
 

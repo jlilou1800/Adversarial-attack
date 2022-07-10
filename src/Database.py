@@ -6,7 +6,7 @@ from PIL import ImageDraw
 from random import choice
 import os
 from shutil import copy
-
+import json
 # from src import Preprocess, PossibleChar
 from src import PossibleChar, Preprocess
 
@@ -15,7 +15,7 @@ run = True
 FACTOR_SCALE = 5
 
 class Database:
-    def __init__(self, nbr_of_file, repository_name="src/dataset", font_pack_path="src/Font_Pack", img_width=25, img_height=20, font_size=10):
+    def __init__(self, nbr_of_file, repository_name="src/dataset", font_pack_path="src/Font_Pack", img_width=250, img_height=250, font_size=24):
         self.nbrOfFile = nbr_of_file
         self.alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"#0123456789" # TODO: nombre a peut-être supprimer
         self.repository = repository_name
@@ -23,6 +23,13 @@ class Database:
         self.imgHeight = img_height
         self.fontPackPath = font_pack_path
         self.fontSize = font_size
+        self.labels = {}
+
+    def define_labels(self):
+        for char in self.alphaNum:
+            self.labels[ord(char)] = char
+        with open('src/dataset_flattened/labels.json', 'w') as f:
+            json.dump(self.labels, f)
 
     def createDb(self):
         for repo in [self.repository, '{}_flattened'.format(self.repository)]:      # create dataset folders
@@ -51,18 +58,19 @@ class Database:
         for i in range(len(img)):
             for j in range(len(img[i])):
                 _pix = sum(img[i][j][0:3])
-                if _pix > 0:                    # if pixel is activated return 1, else return 0
-                    img_str += ' ' + str(1)     # only two color in flattened image file (0 and 1)
-                else:
-                    img_str += ' ' + str(0)
+                # if _pix > 0:                    # if pixel is activated return 1, else return 0
+                #     img_str += ' ' + str(1)     # only two color in flattened image file (0 and 1)
+                # else:
+                #     img_str += ' ' + str(0)
+                img_str += ' ' + str(_pix)
         x_db.write(img_str + '\n')
         y_db.write(str(ord(char)) + '\n')
         x_db.close(), y_db.close()
 
     def createImage(self, n, char, font, updt=False, repo=False):
-        path = "{}/data_{}_{}.png".format(self.repository, n, char)
+        path = "{}/data_{}_{}.jpeg".format(self.repository, n, char)
         if updt:
-            path = "charsPlate/data_{}_{}.png".format(repo, n, char)
+            path = "charsPlate/data_{}_{}.jpeg".format(repo, n, char)
         font = ImageFont.truetype(font, self.fontSize*FACTOR_SCALE)
         img = Image.new("RGBA", (self.imgWidth*FACTOR_SCALE, self.imgHeight*FACTOR_SCALE), (0, 0, 0))
         draw = ImageDraw.Draw(img)
@@ -86,7 +94,7 @@ class Database:
             succes = True
             crop_img = imgOriginal[ext[0]:ext[1], ext[2]:ext[3]]
             crop_img = cv2.resize(crop_img, (self.imgHeight, self.imgWidth))
-            cv2.imwrite(imgPath + '_test.png', crop_img)
+            cv2.imwrite(imgPath + '_test.jpeg', crop_img)
         return succes, crop_img
 
     def updateTestOrTrainingFlattened(self, i, j):

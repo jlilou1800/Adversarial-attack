@@ -53,7 +53,12 @@ class BaseClassifier:
         return y_test, y_score[:, 1]
 
     def predict_proba(self, x):
+        # x = [x]
         p = self.classifier.predict_proba(x)
+        return p
+
+    def score(self, x, y):
+        p = self.classifier.score(x, y)
         return p
 
     def evaluationMetrics(self, y_true, y_pred, y_score):
