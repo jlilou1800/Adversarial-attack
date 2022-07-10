@@ -9,7 +9,7 @@ from torchvision import transforms
 import numpy as np
 import requests, io
 import matplotlib.pyplot as plt
-from matplotlib import cm
+from matplotlib import cm, collections
 import json
 from torch.autograd import Variable
 # %matplotlib inline
@@ -28,7 +28,7 @@ class AdversarialAttack:
         self.std = [0.229, 0.224, 0.225]
         self.labels = self.get_labels()
 
-    def adversarial_attack(self, method, x_test, y_true, classifier, eps):
+    def adversarial_attack(self, method, x_test, y_true, classifier, eps, y_target=None):
         img = self.array_to_jpeg(x_test)
         image_tensor, img_variable = self.image_to_tensor(img)
         self.output = self.inceptionv3.forward(img_variable)
@@ -40,7 +40,8 @@ class AdversarialAttack:
 
         if method == "fgsm":
             x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.fgsm(y_true, img_variable, eps, classifier)
-
+        elif method == "ostcm":
+            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.ostcm(y_true, y_target, img_variable, eps, classifier)
 
         visualize(image_tensor, x_adversarial, x_grad, eps, y_pred_label, y_adv_pred_label, x_pred_prob, adv_pred_prob)
 
@@ -102,25 +103,28 @@ class AdversarialAttack:
     # def pdgm(self):
     #     pass
     #
-    # def ostcm(self):
-    #     # targeted class can be a random class or the least likely class predicted by the network
-    #     y_target = 288  # leopard
-    #     y_target = Variable(torch.LongTensor([y_target]), requires_grad=False)
-    #     print(y_target)
-    #
-    #     zero_gradients(img_variable)  # flush gradients
-    #     loss_cal2 = loss(output, y_target)
-    #     loss_cal2.backward()
-    #     epsilons = [0.002, 0.01, 0.15, 0.5]
-    #     x_grad = torch.sign(img_variable.grad.data)
-    #     for i in epsilons:
-    #         x_adversarial = img_variable.data - i * x_grad
-    #         output_adv = self.inceptionv3.forward(Variable(x_adversarial))
-    #         x_adv_pred = labels[torch.max(output_adv.data, 1)[1][0]]
-    #         op_adv_probs = F.softmax(output_adv, dim=1)
-    #         adv_pred_prob = round((torch.max(op_adv_probs.data, 1)[0][0]) * 100, 4)
-    #         visualize(image_tensor, x_adversarial, x_grad, i, x_pred, x_adv_pred, x_pred_prob, adv_pred_prob)
-    #
+    def ostcm(self, y_true, y_target, img_variable, eps, classifier):
+        # targeted class can be a random class or the least likely class predicted by the network
+        y_target = Variable(torch.LongTensor([y_target]), requires_grad=False)
+
+        zero_gradients(img_variable)  # flush gradients
+        loss = torch.nn.CrossEntropyLoss()
+        loss_cal2 = loss(self.output, y_target)
+        loss_cal2.backward()
+        x_grad = torch.sign(img_variable.grad.data)
+
+        x_adversarial = img_variable.data - eps * x_grad
+        x_adv = x_adversarial.data.numpy()[0][0]
+        x_adv = x_adv.flatten()
+
+        y_adv_pred = classifier.predict2([x_adv])
+        y_adv_pred = int(y_adv_pred[0][0])
+        y_adv_pred_label = self.labels[str(y_adv_pred)]
+
+        pred_index = ord(y_adv_pred_label) - 65
+        adv_pred_prob = classifier.predict_proba([x_adv])[0][pred_index]
+
+        return x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob
     # #
     # def bim(self, epsilon=0.25, num_steps=5, alpha=0.025):
     #     y_true = Variable(torch.LongTensor([282]), requires_grad=False)  # tiger cat
@@ -205,3 +209,12 @@ def visualize(x, x_adv, x_grad, epsilon, clean_pred, adv_pred, clean_prob, adv_p
                transform=ax[2].transAxes)
 
     plt.show()
+
+def zero_gradients(x):
+    if isinstance(x, torch.Tensor):
+        if x.grad is not None:
+            x.grad.detach_()
+            x.grad.zero_()
+    elif isinstance(x, collections.abc.Iterable):
+        for elem in x:
+            zero_gradients(elem)

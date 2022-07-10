@@ -61,7 +61,9 @@ def main():
     X_test = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))
     Y_test = np.loadtxt("{}/Y_test.txt".format('src/dataset_flattened'))
     Attack = AdversarialAttack()
-    Attack.adversarial_attack(methods[0], X_test[0], Y_test[0], KNN, eps)
+    # Attack.adversarial_attack(methods[0], X_test[0], Y_test[0], KNN, eps)
+
+    Attack.adversarial_attack(methods[1], X_test[0], Y_test[0], KNN, eps, 78)   # 78 -> 'N'
 
     # for eps in epsilons:
 
