@@ -63,7 +63,8 @@ def main():
     Attack = AdversarialAttack()
     # Attack.adversarial_attack(methods[0], X_test[0], Y_test[0], KNN, eps)
 
-    Attack.adversarial_attack(methods[1], X_test[0], Y_test[0], KNN, eps, 78)   # 78 -> 'N'
+    # Attack.adversarial_attack(methods[1], X_test[0], Y_test[0], KNN, eps, 78)   # 78 -> 'N'
+    Attack.adversarial_attack(methods[2], X_test[0], Y_test[0], KNN, eps)
 
     # for eps in epsilons:
 

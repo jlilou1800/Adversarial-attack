@@ -41,7 +41,9 @@ class AdversarialAttack:
         if method == "fgsm":
             x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.fgsm(y_true, img_variable, eps, classifier)
         elif method == "ostcm":
-            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.ostcm(y_true, y_target, img_variable, eps, classifier)
+            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.ostcm(y_target, img_variable, eps, classifier)
+        else:   # method == "bim":
+            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.bim(image_tensor, img_variable, y_true, classifier, eps)
 
         visualize(image_tensor, x_adversarial, x_grad, eps, y_pred_label, y_adv_pred_label, x_pred_prob, adv_pred_prob)
 
@@ -103,7 +105,7 @@ class AdversarialAttack:
     # def pdgm(self):
     #     pass
     #
-    def ostcm(self, y_true, y_target, img_variable, eps, classifier):
+    def ostcm(self, y_target, img_variable, eps, classifier):
         # targeted class can be a random class or the least likely class predicted by the network
         y_target = Variable(torch.LongTensor([y_target]), requires_grad=False)
 
@@ -125,34 +127,36 @@ class AdversarialAttack:
         adv_pred_prob = classifier.predict_proba([x_adv])[0][pred_index]
 
         return x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob
-    # #
-    # def bim(self, epsilon=0.25, num_steps=5, alpha=0.025):
-    #     y_true = Variable(torch.LongTensor([282]), requires_grad=False)  # tiger cat
-    #     # epsilon = 0.25
-    #     # num_steps = 5
-    #     # alpha = 0.025
-    #     # above three are hyperparameters
-    #     for i in range(num_steps):
-    #         # zero_gradients(img_variable)  # flush gradients
-    #         output = inceptionv3.forward(img_variable)  # perform forward pass
-    #         loss = torch.nn.CrossEntropyLoss()
-    #         loss_cal = loss(output, y_true)
-    #         loss_cal.backward()
-    #         x_grad = alpha * torch.sign(img_variable.grad.data)  # as per the formula
-    #         adv_temp = img_variable.data + x_grad  # add perturbation to img_variable which also contains perturbation from previous iterations
-    #         total_grad = adv_temp - image_tensor  # total perturbation
-    #         total_grad = torch.clamp(total_grad, -epsilon, epsilon)
-    #         x_adv = image_tensor + total_grad  # add total perturbation to the original image
-    #         img_variable.data = x_adv
-    #
-    #     # final adversarial example can be accessed at- img_variable.data
-    #     output_adv = inceptionv3.forward(img_variable)
-    #     x_adv_pred = labels[torch.max(output_adv.data, 1)[1][0]]  # classify adversarial example
-    #     output_adv_probs = F.softmax(output_adv, dim=1)
-    #     x_adv_pred_prob = round((torch.max(output_adv_probs.data, 1)[0][0]) * 100, 4)
-    #     visualize(image_tensor, img_variable.data, total_grad, epsilon, x_pred, x_adv_pred, x_pred_prob,
-    #               x_adv_pred_prob)  # class and prob of original ex will remain same
-    # #
+
+    def bim(self, image_tensor, img_variable, y_true, classifier, eps, num_steps=5, alpha=0.025):
+        y_true = Variable(torch.LongTensor([y_true]), requires_grad=False)  # tiger cat
+        total_grad = None
+        for i in range(num_steps):
+            zero_gradients(img_variable)  # flush gradients
+            output = self.inceptionv3.forward(img_variable)  # perform forward pass
+            loss = torch.nn.CrossEntropyLoss()
+            loss_cal = loss(output, y_true)
+            loss_cal.backward()
+            x_grad = alpha * torch.sign(img_variable.grad.data)  # as per the formula
+            adv_temp = img_variable.data + x_grad  # add perturbation to img_variable which also contains perturbation from previous iterations
+            total_grad = adv_temp - image_tensor  # total perturbation
+            total_grad = torch.clamp(total_grad, -eps, eps)
+            x_adv = image_tensor + total_grad  # add total perturbation to the original image
+            img_variable.data = x_adv
+
+        # final adversarial example can be accessed at- img_variable.data
+        x_adv = img_variable.data.numpy()[0][0]
+        x_adv = x_adv.flatten()
+
+        y_adv_pred = classifier.predict2([x_adv])
+        y_adv_pred = int(y_adv_pred[0][0])
+        y_adv_pred_label = self.labels[str(y_adv_pred)]
+
+        pred_index = ord(y_adv_pred_label) - 65
+        adv_pred_prob = classifier.predict_proba([x_adv])[0][pred_index]
+
+        return img_variable.data, total_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob
+
     # def illcm(self):
     #     pass
     #
