@@ -16,36 +16,51 @@ from torch.autograd import Variable
 
 from PIL import TiffImagePlugin, JpegImagePlugin
 
-COLUMN = 250
-LINE = 250
+COLUMN = 100
+LINE = 100
 
 class AdversarialAttack:
-    def __init__(self):
-        self.inceptionv3 = models.inception_v3(pretrained=True)  # download and load pretrained inceptionv3 model
+    def __init__(self, model):
+        # self.inceptionv3 = models.inception_v3(pretrained=True)  # download and load pretrained inceptionv3 model
+        self.inceptionv3 = models.resnet18(pretrained=True)  # download and load pretrained inceptionv3 model
+
         self.inceptionv3.eval()
+        self.model = model
         self.output = None
         self.mean = [0.485, 0.456, 0.406]
         self.std = [0.229, 0.224, 0.225]
         self.labels = self.get_labels()
 
     def adversarial_attack(self, method, x_test, y_true, classifier, eps, y_target=None):
-        img = self.array_to_jpeg(x_test)
-        image_tensor, img_variable = self.image_to_tensor(img)
-        self.output = self.inceptionv3.forward(img_variable)
-        y_test = classifier.predict2([x_test])
-        y_test = int(y_test[0][0])
-        y_pred_label = self.labels[str(y_test)]
-        pred_index = ord(y_pred_label) - 65
-        x_pred_prob = classifier.predict_proba([x_test])[0][pred_index]
+        Y_adv_test = []
+        X_adv = []
+        X_adv_flattened = []
+        for i in range(len(x_test)):
+            img = self.array_to_jpeg(x_test[i])
+            image_tensor, img_variable = self.image_to_tensor(img)
+            self.output = self.inceptionv3.forward(img_variable)
+            y_test = classifier.predict2([x_test[i]])
+            y_test = int(y_test[0][0])
+            y_pred_label = self.labels[str(y_test)]
+            pred_index = ord(y_pred_label) - 97 #65
+            x_pred_prob = classifier.predict_proba([x_test[i]])[0][pred_index]
 
-        if method == "fgsm":
-            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.fgsm(y_true, img_variable, eps, classifier)
-        elif method == "ostcm":
-            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.ostcm(y_target, img_variable, eps, classifier)
-        else:   # method == "bim":
-            x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.bim(image_tensor, img_variable, y_true, classifier, eps)
-
-        visualize(image_tensor, x_adversarial, x_grad, eps, y_pred_label, y_adv_pred_label, x_pred_prob, adv_pred_prob)
+            if method == "fgsm":
+                x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.fgsm(y_true[i], img_variable, eps, classifier)
+            elif method == "ostcm":
+                x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.ostcm(y_target, img_variable, eps, classifier)
+            else:   # method == "bim":
+                x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob = self.bim(image_tensor, img_variable, y_true[i], classifier, eps)
+            Y_adv_test.append(int(y_adv_pred))
+            x_adv = x_adversarial.data.numpy()[0][0]
+            x_adv = x_adv.flatten()
+            X_adv.append(x_adversarial)
+            X_adv_flattened.append(x_adv)
+            # print()
+            # print("adv prob: ", adv_pred_prob)
+            # x, x_adv, x_grad, epsilon, clean_pred, adv_pred, clean_prob, adv_prob
+            # visualize(image_tensor, x_adversarial, x_grad, eps, y_pred_label, y_adv_pred_label, x_pred_prob, adv_pred_prob)
+        return Y_adv_test, X_adv, X_adv_flattened, y_adv_pred
 
     def array_to_jpeg(self, x_array):
         x_array_2d = x_array.reshape(LINE, COLUMN)
@@ -97,10 +112,11 @@ class AdversarialAttack:
 
         # output_adv = self.inceptionv3.forward(Variable(x_adversarial))  # perform a forward pass on adv example
 
-        pred_index = ord(y_adv_pred_label) - 65
+        pred_index = ord(y_adv_pred_label) - 97
         adv_pred_prob = classifier.predict_proba([x_adv])[0][pred_index]
-
+        # print(classifier.predict_proba([x_adv]))
         return x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob
+        # return x_adv, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob
 
     # def pdgm(self):
     #     pass
@@ -123,7 +139,7 @@ class AdversarialAttack:
         y_adv_pred = int(y_adv_pred[0][0])
         y_adv_pred_label = self.labels[str(y_adv_pred)]
 
-        pred_index = ord(y_adv_pred_label) - 65
+        pred_index = ord(y_adv_pred_label) - 97
         adv_pred_prob = classifier.predict_proba([x_adv])[0][pred_index]
 
         return x_adversarial, x_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob
@@ -152,7 +168,7 @@ class AdversarialAttack:
         y_adv_pred = int(y_adv_pred[0][0])
         y_adv_pred_label = self.labels[str(y_adv_pred)]
 
-        pred_index = ord(y_adv_pred_label) - 65
+        pred_index = ord(y_adv_pred_label) - 97
         adv_pred_prob = classifier.predict_proba([x_adv])[0][pred_index]
 
         return img_variable.data, total_grad, y_adv_pred, y_adv_pred_label, adv_pred_prob

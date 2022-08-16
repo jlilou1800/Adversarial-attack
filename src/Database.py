@@ -12,12 +12,12 @@ from src import PossibleChar, Preprocess
 
 run = True
 
-FACTOR_SCALE = 5
+FACTOR_SCALE = 1
 
 class Database:
-    def __init__(self, nbr_of_file, repository_name="src/dataset", font_pack_path="src/Font_Pack", img_width=250, img_height=250, font_size=24):
+    def __init__(self, nbr_of_file, repository_name="src/dataset", font_pack_path="src/Font_Pack", img_width=100, img_height=100, font_size=110):
         self.nbrOfFile = nbr_of_file
-        self.alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"#0123456789" # TODO: nombre a peut-être supprimer
+        self.alphaNum = "abcdefghijklmnopqrstuvw"   #0123456789"
         self.repository = repository_name
         self.imgWidth = img_width
         self.imgHeight = img_height
@@ -42,7 +42,7 @@ class Database:
                 print(n)
             rand_char = choice(self.alphaNum)
             font_files = os.listdir(self.fontPackPath)
-            #rand_font = self.fontPackPath + "/" + 'arialbd.ttf'
+            # rand_font = self.fontPackPath + "/" + 'arialbd.ttf'
             rand_font = self.fontPackPath + "/" + choice(font_files)
             success, img = self.createImage(n+1, rand_char, rand_font)
             if success:
@@ -67,16 +67,30 @@ class Database:
         y_db.write(str(ord(char)) + '\n')
         x_db.close(), y_db.close()
 
+    def center_text(self, img, font, text, color=(0, 0, 0)):
+        draw = ImageDraw.Draw(img)
+        text_width, text_height = draw.textsize(text, font)
+        position = ((self.imgWidth - text_width)/2, (self.imgHeight - text_height)/2)
+        draw.text(position, text, color, font=font)
+        return img
+
     def createImage(self, n, char, font, updt=False, repo=False):
         path = "{}/data_{}_{}.jpeg".format(self.repository, n, char)
         if updt:
             path = "charsPlate/data_{}_{}.jpeg".format(repo, n, char)
-        font = ImageFont.truetype(font, self.fontSize*FACTOR_SCALE)
-        img = Image.new("RGBA", (self.imgWidth*FACTOR_SCALE, self.imgHeight*FACTOR_SCALE), (0, 0, 0))
+        font = ImageFont.truetype(font, self.fontSize)
+        img = Image.new("RGBA", (self.imgWidth, self.imgHeight), (255, 255, 255))
         draw = ImageDraw.Draw(img)
-        draw.text((0, 0), char, (255, 255, 255), font=font)
-        success, imgCropped = self.resizeImg(img, path)
-        return success, imgCropped
+        # w, h = draw.textsize(char)
+        self.center_text(img, font, char)
+        # draw.text((self.imgWidth, 0), char, (255, 255, 255), font=font, align="center")
+        # img.show()
+        # success, imgCropped = self.resizeImg(img, path)
+        # return success, imgCropped
+        # imgOriginal = np.asarray(img).copy()
+        imgOriginal = np.array(img)
+        cv2.imwrite(path + '_test.jpeg', imgOriginal)
+        return True, imgOriginal
 
     def resizeImg(self, img, imgPath):
         imgOriginal = np.asarray(img).copy()
@@ -96,6 +110,7 @@ class Database:
             crop_img = cv2.resize(crop_img, (self.imgHeight, self.imgWidth))
             cv2.imwrite(imgPath + '_test.jpeg', crop_img)
         return succes, crop_img
+        # return True, img
 
     def updateTestOrTrainingFlattened(self, i, j):
         x_db = open('{0}_flattened/X_dataset.txt'.format(self.repository), 'r')

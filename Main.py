@@ -6,23 +6,23 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 from torchvision import datasets, transforms
-
 
 import numpy as np
 import matplotlib.pyplot as plt
 from src import Database
 from src.AdversarialAttack import AdversarialAttack
-from src.Classifiers import AdaptiveBoosting, LogisticRegression, BayesianNetwork, DecisionTree, RandomForest, Support_Vector_Machine, K_NearestNeighbors
+from src.Classifiers import AdaptiveBoosting, LogisticRegression, BayesianNetwork, DecisionTree, RandomForest, \
+    Support_Vector_Machine, K_NearestNeighbors
 import warnings
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-COLUMN = 20
-LINE = 25
+COLUMN = 100
+LINE = 100
 
 
 def adversarial_attack(X_test, eps, classifierAlgo):
@@ -47,34 +47,92 @@ def adversarial_attack(X_test, eps, classifierAlgo):
     print(classifierAlgo.predict_proba(adversarial_img))
     return y_pred
 
+
 def main():
-    epsilons = [.05, .1, .15, .2, .25, .3]
+    # epsilons = [.05, .1, .15, .2, .25, .3]
+    epsilons = [.1, .5, 1, 1.5, 2, 2.5, 3]
+    # epsilons = [1.5]
     methods = ["fgsm", "ostcm", "bim"]
-    eps = epsilons[-1]
+    # eps = epsilons[1]
     # KNN = None
-    db = Database.Database(1000)
+    db = Database.Database(10000)
     # db.createDb()
     # db.kFoldCrossValidation(10, 1)
     db.define_labels()
-    KNN = K_NearestNeighbors.K_NearestNeighbors('f_measure')
+    # print("Load knn ...")
+    # KNN = Support_Vector_Machine.Support_Vector_Machine('f_measure')
+    # KNN = DecisionTree.DecisionTree('f_measure')
 
+    # KNN = K_NearestNeighbors.K_NearestNeighbors('f_measure')
+    # KNN = RandomForest.RandomForest('f_measure')
+    # exit()
+    # KNN = LogisticRegression.Logistic_Regression('f_measure')
+    # y_pred = KNN.predict()[1]
     X_test = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))
     Y_test = np.loadtxt("{}/Y_test.txt".format('src/dataset_flattened'))
-    Attack = AdversarialAttack()
-    # Attack.adversarial_attack(methods[0], X_test[0], Y_test[0], KNN, eps)
+    # print("PLOT LOADING")
+    # print("Accuracy score ...")
+    # print(accuracy_score(Y_test, y_pred))
+    # print("Recall score ...")
+    # print(recall_score(Y_test, y_pred, average='weighted'))
+    # print("Precision score ...")
+    # print(precision_score(Y_test, y_pred, average='weighted'))
+    # print("F1 score ...")
+    # print(f1_score(Y_test, y_pred, average='weighted'))
+    # print(Y_test[:50])
+    # print(y_pred[:50])
+    # KNN.plot_images(X_test[24:42], Y_test[24:42], y_pred[24:42], 3, 6)
+    # print("PLOT OKKKKK")
+    # exit()
 
-    # Attack.adversarial_attack(methods[1], X_test[0], Y_test[0], KNN, eps, 78)   # 78 -> 'N'
-    Attack.adversarial_attack(methods[2], X_test[0], Y_test[0], KNN, eps)
+    models = parameter_testing()
+
+
+    print("Load adversarial attack ...")
+    attacks = []
+    x_adv = []
+    y_pred = []
+    x_adv_flattened = []
+    for model in models:
+        print("-"*10, model, "-"*10)
+        Attack = AdversarialAttack(model)
+        for method in methods:
+            print("*" * 10, method, "*" * 10)
+            for eps in epsilons:
+                print("-" * 10, "eps: ", eps, "-" * 10)
+                print("OKKKKKK")
+                res = Attack.adversarial_attack(method, X_test, Y_test, model, eps, 109)
+                attacks = res
+                x_adv = res[1]
+                x_adv_flattened = res[2]
+                y_pred = res[2]
+                print(x_adv[0])
+                print(len(x_adv))
+                y_pred = model.predict(x_adv_flattened, Y_test)[1]
+                print("Accuracy score ...")
+                print("Précision: ", accuracy_score(Y_test, y_pred))
+                print("precision: ", precision_score(Y_test, y_pred, average='weighted'))
+                print("recall: ", recall_score(Y_test, y_pred, average='weighted'))
+                print("f_measure: ", f1_score(Y_test, y_pred, average='weighted'))
+
+    # plot_images(attacks, Y_test[:9], Y_test[:9], 3, 3)
+
+    # plot_images(x_adv, Y_test[:9], y_pred, 3, 3)
+
+    # print("Accuracy score ...")
+    # print(accuracy_score(Y_test, y_adv_pred))
+
+    # Attack.adversarial_attack(methods[1], [X_test[1]], [Y_test[1]], KNN, eps, 78)   # 78 -> 'N'
+    # Attack.adversarial_attack(methods[2], X_test[0], Y_test[0], KNN, eps)
 
     # for eps in epsilons:
-
 
     # db = Database.Database(100)
     # db.define_labels()
     # db.createDb()
     # db.kFoldCrossValidation(10, 1)
 
-    # parameter_testing()
+
 
     # X_test = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))
     # plt.imshow(X.reshape(LINE, COLUMN), vmin=0., vmax=1.)
@@ -95,7 +153,6 @@ def main():
     # x_p = DT.predict_proba(X_test[0])
     # print("X prédiction proba = ", x_p)
     # adversarial_attack(X_test[:5], DT)
-
 
 
 # def model(X, theta):
@@ -120,32 +177,36 @@ def main():
 #     return theta, cost_history
 
 def parameter_testing():
-    print("Decision Tree - Best Parameters establishing ...")                 # accuracy = 0.936
-    DT = DecisionTree.DecisionTree('f_measure')
+    # print("Decision Tree - Best Parameters establishing ...")  # accuracy = 0.936
+    # DT = DecisionTree.DecisionTree('f_measure')
 
-    print("--------------------------------------------------------")
-    print("Random Forest - Best Parameters establishing ...")                 # accuracy = 0.911
-    RF = RandomForest.RandomForest('f_measure')
+    # print("--------------------------------------------------------")
+    # print("Random Forest - Best Parameters establishing ...")                 # accuracy = 0.911
+    # RF = RandomForest.RandomForest('f_measure')
 
     # print("--------------------------------------------------------")
     # print("AdaBoost - Best Parameters establishing ...")                      # accuracy = 0.624
     # AB = AdaptiveBoosting.AdaBoost('f_measure')
 
-    print("--------------------------------------------------------")
-    print("K Nearest Neighbors - Best Parameters establishing ...")             # accuracy = 0.938
-    KNN = K_NearestNeighbors.K_NearestNeighbors('f_measure')
+    # print("--------------------------------------------------------")
+    # print("K Nearest Neighbors - Best Parameters establishing ...")             # accuracy = 0.938
+    # KNN = K_NearestNeighbors.K_NearestNeighbors('f_measure')
 
-    print("--------------------------------------------------------")
-    print("Logistic Regression - Best Parameters establishing ...")             # accuracy = 0.931
-    LR = LogisticRegression.Logistic_Regression('f_measure')
+    # print("--------------------------------------------------------")
+    # print("Logistic Regression - Best Parameters establishing ...")             # accuracy = 0.931
+    # LR = LogisticRegression.Logistic_Regression('f_measure')
 
     print("--------------------------------------------------------")
     print("Support Vector Machine - Best Parameters establishing ...")          # accuracy = 0.965
     SVM = Support_Vector_Machine.Support_Vector_Machine('f_measure')
 
-    # print("--------------------------------------------------------")
-    # print("Bayesian Network - Best Parameters establishing ...")              # accuracy = 0.631
-    # BN = BayesianNetwork.BayesianNetwork('f_measure')
+    print("--------------------------------------------------------")
+    print("Bayesian Network - Best Parameters establishing ...")              # accuracy = 0.631
+    BN = BayesianNetwork.BayesianNetwork('f_measure')
+
+    return SVM, BN
+    # return DT, RF, AB, KNN, LR, SVM, BN
+
 
 def clearRepository(repo_name):
     try:

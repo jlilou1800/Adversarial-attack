@@ -9,7 +9,7 @@ class Logistic_Regression(BaseClassifier.BaseClassifier):
 
     LRBestParameters = None
 
-    def __init__(self, datasets, metric_choose='*'):
+    def __init__(self, metric_choose='*'):
         BaseClassifier.BaseClassifier.__init__(self, metric_choose)
         print("Optimisation of the parameters ...")
         self.LRBestParameters = self.parameter_optimize()
@@ -48,7 +48,7 @@ class Logistic_Regression(BaseClassifier.BaseClassifier):
                 metrics_y_test = metrics_y_test + list(results_test)
                 metrics_y_score = metrics_y_score + list(results_score[:, 1])
 
-                evaluated_test_metrics = self.evaluationMetrics(metrics_y_true, metrics_y_test, metrics_y_score)
+                evaluated_test_metrics = self.evaluationMetrics(metrics_y_true, metrics_y_test)
 
                 for key in evaluated_test_metrics:
                     if key not in best_parameters.keys():
