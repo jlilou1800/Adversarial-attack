@@ -27,7 +27,9 @@ class Support_Vector_Machine(BaseClassifier.BaseClassifier):
         y_test = np.loadtxt("{}/Y_test.txt".format('src/dataset_flattened'))
 
         for C in [0.1, 1, 10, 100]:
+            print("C: ", C)
             for gamma in ['auto', 'scale']:
+                print("Gamme: ", gamma)
                 metrics_y_true = []
                 metrics_y_test = []
                 metrics_y_score = []

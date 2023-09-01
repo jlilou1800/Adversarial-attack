@@ -9,3 +9,11 @@
 *.pyc
 *.pyc
 *.txt
+*.json
+*.txt
+src/dataset_flattened/Y_train.txt
+src/dataset_flattened/Y_test.txt
+src/dataset_flattened/Y_dataset.txt
+src/dataset_flattened/X_train.txt
+src/dataset_flattened/X_test.txt
+src/dataset_flattened/X_dataset.txt

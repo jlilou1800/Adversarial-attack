@@ -52,13 +52,14 @@ def main():
     # epsilons = [.05, .1, .15, .2, .25, .3]
     epsilons = [.1, .5, 1, 1.5, 2, 2.5, 3]
     # epsilons = [1.5]
-    methods = ["fgsm", "ostcm", "bim"]
+    methods = ["fgsm"] #, "ostcm", "bim"]
     # eps = epsilons[1]
     # KNN = None
-    db = Database.Database(10000)
+    db = Database.Database(100)
     # db.createDb()
     # db.kFoldCrossValidation(10, 1)
     db.define_labels()
+    print("Database OK !")
     # print("Load knn ...")
     # KNN = Support_Vector_Machine.Support_Vector_Machine('f_measure')
     # KNN = DecisionTree.DecisionTree('f_measure')
@@ -70,6 +71,7 @@ def main():
     # y_pred = KNN.predict()[1]
     X_test = np.loadtxt("{}/X_test.txt".format('src/dataset_flattened'))
     Y_test = np.loadtxt("{}/Y_test.txt".format('src/dataset_flattened'))
+    print("X_test and Y_test OK !")
     # print("PLOT LOADING")
     # print("Accuracy score ...")
     # print(accuracy_score(Y_test, y_pred))
@@ -200,11 +202,11 @@ def parameter_testing():
     print("Support Vector Machine - Best Parameters establishing ...")          # accuracy = 0.965
     SVM = Support_Vector_Machine.Support_Vector_Machine('f_measure')
 
-    print("--------------------------------------------------------")
-    print("Bayesian Network - Best Parameters establishing ...")              # accuracy = 0.631
-    BN = BayesianNetwork.BayesianNetwork('f_measure')
+    # print("--------------------------------------------------------")
+    # print("Bayesian Network - Best Parameters establishing ...")              # accuracy = 0.631
+    # BN = BayesianNetwork.BayesianNetwork('f_measure')
 
-    return SVM, BN
+    return SVM
     # return DT, RF, AB, KNN, LR, SVM, BN
 
 
